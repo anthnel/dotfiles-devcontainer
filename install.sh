@@ -9,3 +9,4 @@ conda install -c conda-forge starship -y
 
 starship preset nerd-font-symbols -o ~/.config/starship.toml
 
+ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
