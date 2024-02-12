@@ -1,8 +1,8 @@
 
 # Update debian dependancies
-if command -v apt-get &> /dev/null; then
-  sudo apt-get update
-  sudo apt-get install -y bat
+if command -v apt &> /dev/null; then
+  sudo apt update
+  sudo apt install -y bat zsh-autosuggestions zsh-syntax-highlighting zsh zsh-autocomplete
 fi
 
 conda install -c conda-forge starship -y
