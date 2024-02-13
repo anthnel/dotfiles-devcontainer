@@ -13,6 +13,12 @@ git config --global core.autocrlf input
 conda install -c conda-forge starship -y
 starship preset nerd-font-symbols -o ~/.config/starship.toml
 
+# install k9s
+go install github.com/derailed/k9s@latest
+
+# install tilt
+curl -fsSL https://raw.githubusercontent.com/tilt-dev/tilt/master/scripts/install.sh | bash
+
 # install fzf
 
 zshplug="$HOME/.config/zsh_plugins"
