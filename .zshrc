@@ -39,6 +39,7 @@ if [[ -d "/commandhistory" ]] ; then
     append_history() { fc -W }
     add-zsh-hook precmd append_history
     export HISTFILE=/commandhistory/.zsh_history
+    touch $HISTFILE
 fi
 
 
