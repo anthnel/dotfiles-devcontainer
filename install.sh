@@ -3,7 +3,7 @@
 # Update debian dependancies
 if command -v apt &> /dev/null; then
   sudo apt update
-  sudo apt install -y zsh-autosuggestions zsh-syntax-highlighting  
+  sudo apt install -y zsh-autosuggestions zsh-syntax-highlighting httpie 
 fi
 
 # config git for line ending
