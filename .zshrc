@@ -33,13 +33,12 @@ setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 setopt EXTENDED_HISTORY  # record command start time
 
+# persist zsh history across decontainer rebuild
+if [[ -d "/commandhistory" ]] ; then 
+    autoload -Uz add-zsh-hook
+    append_history() { fc -W }
+    add-zsh-hook precmd append_history
+    export HISTFILE=/commandhistory/.zsh_history
+fi
 
-# plugins
-#plugins=(
-#  git
-#  zsh-autosuggestions
-#  zsh-syntax-highlighting
-#  fast-syntax-highlighting
-#  zsh-autocomplete
-#  fzf-zsh-plugin
-#)
+
