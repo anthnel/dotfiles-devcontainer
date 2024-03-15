@@ -17,7 +17,8 @@ setopt share_history
 
 # PATH
 export FZF_PATH=${HOME}/.config/fzf
-export PATH=${fzfplugdir}/bin:${FZF_PATH}:$PATH
+BREW=/home/linuxbrew/.linuxbrew
+export PATH=${BREW}/bin:${fzfplugdir}/bin:${FZF_PATH}:$PATH
 
 [[ -f ${fzfplugdir}/fzf-zsh-plugin.plugin.zsh ]] && source ${fzfplugdir}/fzf-zsh-plugin.plugin.zsh
 
@@ -43,3 +44,7 @@ if [[ -d "/commandhistory" ]] ; then
 fi
 
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
