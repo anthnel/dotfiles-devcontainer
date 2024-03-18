@@ -12,12 +12,8 @@ git config --global core.autocrlf input
 # install linuxbrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install tools 
-brew install skaffold tilt helm kubectl k9s
-
 # install sdkman
 curl -s "https://get.sdkman.io" | bash
-
 
 # install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -f
@@ -41,3 +37,6 @@ source ~/.zshrc
 sdk install java 17.0.10-tem
 sdk install maven
 sdk install gradle
+
+# install tools 
+brew install skaffold tilt helm kubectl k9s
