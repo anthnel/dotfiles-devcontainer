@@ -30,6 +30,8 @@ setopt EXTENDED_HISTORY  # record command start time
 
 # persist zsh history across decontainer rebuild
 if [[ -d "/commandhistory" ]] ; then 
+    # ensure we can touch it
+    sudo chown $USER: /commandhistory
     autoload -Uz add-zsh-hook
     append_history() { fc -W }
     add-zsh-hook precmd append_history
