@@ -1,7 +1,11 @@
-Git clone the repository in the home dir under dotfiles.
+Dotfiles for DevContainer.
 
-```sh
-git clone https://github.com/anthnel/dotfiles-devcontainer.git ~/dotfiles
+Add the following to your VS Code's settings.json.
+
+```json
+{
+  "remote.containers.dotfiles.repository": "https://github.com/anthnel/dotfiles-devcontainer.git",
+  "remote.containers.dotfiles.installCommand": "~/dotfiles/install.sh",
+  "remote.containers.dotfiles.targetPath": "~/dotfiles",
+}
 ```
-
-Execute the `install.sh` script.

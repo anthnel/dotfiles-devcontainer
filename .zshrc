@@ -3,22 +3,16 @@ eval "$(starship init zsh)"
 # Aliases
 [[ -f $HOME/dotfiles/.aliases ]] && source $HOME/dotfiles/.aliases
 
-
 # fzf
 zshplug="$HOME/.config/zsh_plugins"
 fzfplugdir="$zshplug/fzf-zsh-plugin"
-
-
-# variables
-unset RUBY_VERSION
 
 # options
 setopt share_history
 
 # PATH
 export FZF_PATH=${HOME}/.config/fzf
-BREW=/home/linuxbrew/.linuxbrew
-export PATH=${BREW}/bin:${fzfplugdir}/bin:${FZF_PATH}:$PATH
+export PATH=${fzfplugdir}/bin:${FZF_PATH}:$PATH
 
 [[ -f ${fzfplugdir}/fzf-zsh-plugin.plugin.zsh ]] && source ${fzfplugdir}/fzf-zsh-plugin.plugin.zsh
 
@@ -42,9 +36,3 @@ if [[ -d "/commandhistory" ]] ; then
     export HISTFILE=/commandhistory/.zsh_history
     touch $HISTFILE
 fi
-
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
