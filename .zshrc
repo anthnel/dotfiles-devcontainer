@@ -28,6 +28,9 @@ setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 setopt EXTENDED_HISTORY  # record command start time
 
+
+bindkey '^[[3~'	delete-char
+
 # persist zsh history across decontainer rebuild
 if [[ -d "/commandhistory" ]] ; then 
     # ensure we can touch it

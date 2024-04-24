@@ -30,6 +30,7 @@ starship preset pure-preset -o ${HOME}/.config/starship.toml
  
 # link needed files
 ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -nfs $HOME/dotfiles/.aliases $HOME/.zshrc
 
 source ~/.zshrc
 
